@@ -4,7 +4,7 @@ class SoilSamplesController < ApplicationController
   end
 
   def show
-    @sample = SoilSample.find(params[:somethingelse])
+    @sample = SoilSample.find(params[:id])
   end
 
   def new

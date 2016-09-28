@@ -3,6 +3,6 @@
 <% @samples.each do |s| %>
   <p>
     <%= "Sample from #{s.location} collected by #{s.scientist}" %>
-    <%= link_to "Find it here", soil_sample_path(s.id) %>
+    <%= link_to "Find it here", soil_sample_path(s) %>
   </p>
 <% end %>
