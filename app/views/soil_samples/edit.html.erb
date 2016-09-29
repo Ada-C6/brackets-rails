@@ -1,2 +1,12 @@
-<h1>SoilSamples#edit</h1>
-<p>Find me in app/views/soil_samples/edit.html.erb</p>
+<%= form_for @sample, method: :patch do |f| %>
+  <%= f.label :location, "Location Location" %>
+  <%= f.text_field :location %>
+
+  <%= f.label :scientist %>
+  <%= f.text_field :scientist %>
+
+  <%= f.label :is_wet %>
+  <%= f.check_box :is_wet %>
+
+  <%= f.submit "Submit" %>
+<% end %>

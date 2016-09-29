@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   get 'soil_samples' => 'soil_samples#index'
   get 'soil_samples/new' => 'soil_samples#new'
   post 'soil_samples' => 'soil_samples#create'
+
+  get 'soil_samples/:id/edit', to: 'soil_samples#edit', as: 'soil_sample_edit'
+  patch 'soil_samples/:id' => 'soil_samples#update'
+
   get 'soil_samples/:id', to: 'soil_samples#show', as: 'soil_sample'
 
 
