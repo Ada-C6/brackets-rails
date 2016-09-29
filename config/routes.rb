@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
+  get 'soil_samples' => 'soil_samples#index'
+  get 'soil_samples/new' => 'soil_samples#new'
+  post 'soil_samples' => 'soil_samples#create'
+  get 'soil_samples/:id', to: 'soil_samples#show', as: 'soil_sample'
+
+
+
+
+
   root 'entries#index'
   get '/entries' => 'entries#index'
   get '/entries/new' => 'entries#new'
   get '/entries/:id' => 'entries#show'
-  
+
   post '/entries' => 'entries#create'
 
 
