@@ -39,6 +39,16 @@ class SoilSamplesController < ApplicationController
     end
   end
 
+  def destroy
+    SoilSample.find(params[:id]).destroy
+    redirect_to soil_samples_path
+  end
+
+  # def confirm_deletion
+  #   @sample = SoilSample.find(params[:id])
+  # end
+
+
   private
 
   def soil_params
