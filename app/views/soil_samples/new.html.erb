@@ -1,14 +1,2 @@
-<%= form_for @sample do |f| %>
-  <%= f.label :location, "Location Location" %>
-  <%= f.text_field :location %>
-
-  <%= f.label :scientist %>
-  <%= f.text_field :scientist %>
-
-  <%= f.label :is_wet %>
-  <%= f.check_box :is_wet %>
-
-  <input type="text" name="this_is_bad" value="">
-
-  <%= f.submit "Submit" %>
-<% end %>
+<h1>Make a new soil sample</h1>
+<%= render partial: "form", locals: { http_method: :post } %>

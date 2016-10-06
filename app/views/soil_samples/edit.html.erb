@@ -1,12 +1,2 @@
-<%= form_for @sample, method: :patch do |f| %>
-  <%= f.label :location, "Location Location" %>
-  <%= f.text_field :location %>
-
-  <%= f.label :scientist %>
-  <%= f.text_field :scientist %>
-
-  <%= f.label :is_wet %>
-  <%= f.check_box :is_wet %>
-
-  <%= f.submit "Submit" %>
-<% end %>
+<h1>Edit an existing soil sample</h1>
+<%= render partial: "form", locals: { http_method: :patch } %>

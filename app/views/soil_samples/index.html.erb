@@ -1,11 +1,5 @@
 <h1>SoilSamples</h1>
 
 <% @samples.each do |s| %>
-  <p>
-    <%= "Sample from #{s.location} collected by #{s.scientist}" %>
-    <%= link_to "Find it here", soil_sample_path(s.id) %>
-    <%= link_to "Edit", soil_sample_edit_path(s.id) %>
-    <%= link_to "Destroy", soil_sample_path(s), method: :delete,
-                  data: { :confirm => "Are you really really sure?" } %>
-  </p>
+    <%= render partial: "list_element", locals: { sample: s } %>
 <% end %>
